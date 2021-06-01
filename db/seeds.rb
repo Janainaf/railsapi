@@ -20,6 +20,6 @@ end
   article = Article.create!(
     title: Faker::Book.title,
     content: Faker::Lorem.sentence,
-    user_id: rand(1..5),
+    user: User.all.sample,
   )  
 end
